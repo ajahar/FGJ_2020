@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Blocks/ControllableBlock.gd" type="Script" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="PhysicsMaterial" id=2]
+bounce = 0.5
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="QuadMesh" id=4]
+size = Vector2( 20, 20 )
+
+[node name="ControllableBlock" type="RigidBody2D"]
+material = SubResource( 1 )
+position = Vector2( 430.303, 58.8605 )
+physics_material_override = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource( 4 )

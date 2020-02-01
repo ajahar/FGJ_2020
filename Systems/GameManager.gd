@@ -18,5 +18,5 @@ func _process(delta):
 		game_timer = 0.0
 		play_time += 1
 	
-	if play_time == 2:
-		emit_signal("update_score", "foobar")
+	#if play_time == 2:
+	#	emit_signal("update_score", "foobar")

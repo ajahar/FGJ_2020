@@ -1,7 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blocks/Block_C.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Blocks/Block_2_4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Blocks/Block_Angle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Blocks/Block_Half_Moon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Blocks/Block_2_2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Blocks/Block_L_Left.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Blocks/Block_Slice.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Blocks/Block_Triangle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Blocks/Block_Spike.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Blocks/Block_Z.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Blocks/Block_S.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Blocks/Block_S_Mirror.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Blocks/Block_T_1_2_4.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Blocks/Block_Z_Mirror.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Blocks/Block_L_Right.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Blocks/Block_I_1_4.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Blocks/Block_Triangle_2_4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Ground/Ground_1_2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Ground/Ground_1_3.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Ground/Ground_2_2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Ground/Ground_1_1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Ground/Ground_2_3.tscn" type="PackedScene" id=24]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 500, 10 )
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 1000, 20 )
 
 [node name="Root" type="Node2D"]
 
@@ -9,4 +37,83 @@
 margin_right = 117.0
 margin_bottom = 72.0
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 507, 563 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+mesh = SubResource( 2 )
+
 [node name="TestBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 89.9382, 231.696 )
+
+[node name="Blocks" type="Node2D" parent="."]
+position = Vector2( 451.807, 163.289 )
+
+[node name="Block_2_2" parent="Blocks" instance=ExtResource( 7 )]
+position = Vector2( -32.2404, 11.2715 )
+
+[node name="Block_2_4" parent="Blocks" instance=ExtResource( 4 )]
+position = Vector2( 63.091, 123.328 )
+
+[node name="Block_Angle" parent="Blocks" instance=ExtResource( 5 )]
+position = Vector2( 141.279, 119.983 )
+
+[node name="Block_C" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( 198.98, 70.2266 )
+
+[node name="Block_Half_Moon" parent="Blocks" instance=ExtResource( 6 )]
+position = Vector2( 197.308, 4.99976 )
+
+[node name="Block_I_1_4" parent="Blocks" instance=ExtResource( 18 )]
+position = Vector2( 187.273, -43.5022 )
+
+[node name="Block_L_Left" parent="Blocks" instance=ExtResource( 8 )]
+position = Vector2( -96.631, -5.03513 )
+
+[node name="Block_L_Right" parent="Blocks" instance=ExtResource( 17 )]
+position = Vector2( 42.185, 5.41788 )
+
+[node name="Block_S" parent="Blocks" instance=ExtResource( 13 )]
+position = Vector2( -16.7701, 98.6587 )
+
+[node name="Block_Slice" parent="Blocks" instance=ExtResource( 9 )]
+position = Vector2( 89.0145, 63.9547 )
+
+[node name="Block_Spike" parent="Blocks" instance=ExtResource( 11 )]
+position = Vector2( 55.1468, -38.9029 )
+
+[node name="Block_S_Mirror" parent="Blocks" instance=ExtResource( 14 )]
+position = Vector2( 124.137, 9.18097 )
+
+[node name="Block_Triangle" parent="Blocks" instance=ExtResource( 10 )]
+position = Vector2( -150.987, 9.18097 )
+
+[node name="Block_Triangle_2_4" parent="Blocks" instance=ExtResource( 19 )]
+position = Vector2( 117.029, -49.774 )
+
+[node name="Block_T_1_2_4" parent="Blocks" instance=ExtResource( 15 )]
+position = Vector2( -18.8605, -61.0633 )
+
+[node name="Block_Z" parent="Blocks" instance=ExtResource( 12 )]
+position = Vector2( -100.394, -56.882 )
+
+[node name="Block_Z_Mirror" parent="Blocks" instance=ExtResource( 16 )]
+position = Vector2( -178.583, -48.9377 )
+
+[node name="Ground_1_1" parent="." instance=ExtResource( 23 )]
+position = Vector2( 565.087, 368.308 )
+
+[node name="Ground_1_2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 399.108, 444.666 )
+
+[node name="Ground_1_3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 472.956, 398.421 )
+
+[node name="Ground_2_2" parent="." instance=ExtResource( 22 )]
+position = Vector2( 556.125, 444.666 )
+
+[node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
+position = Vector2( 417.032, 383.006 )
