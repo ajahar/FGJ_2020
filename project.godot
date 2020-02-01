@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="FGJ2020"
+config/name="Overpass - FGJ 2020"
+config/description="A game about repairing a bridge. Global Game Jam 2020 entry."
 run/main_scene="res://Play.tscn"
 config/icon="res://icon.png"
 

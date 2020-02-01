@@ -16,7 +16,7 @@ margin_top = 95.6534
 margin_right = 447.618
 margin_bottom = 125.653
 rect_scale = Vector2( 4.11133, 3.30955 )
-text = "Palikkapeli"
+text = "Overpass"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 474.684
