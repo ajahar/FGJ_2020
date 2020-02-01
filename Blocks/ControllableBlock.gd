@@ -1,9 +1,10 @@
 extends RigidBody2D
 
+export var controllable = true
 export var speed = 3  # How fast the player will move (pixels/sec).
 var screen_size  # Size of the game window.
 
-var controllable = true
+
 
 func _ready():
 	screen_size = get_viewport_rect().size

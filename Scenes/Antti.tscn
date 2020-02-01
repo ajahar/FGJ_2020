@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Blocks/ControllableBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Systems/BlockSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/Block_C.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Blocks/Block_2_4.tscn" type="PackedScene" id=4]
@@ -47,7 +47,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="Blocks" type="Node2D" parent="."]
-position = Vector2( 224, -80 )
+position = Vector2( 330.138, 128.777 )
 
 [node name="Block_2_2" parent="Blocks" instance=ExtResource( 7 )]
 position = Vector2( -32.2404, 11.2715 )
@@ -115,10 +115,10 @@ position = Vector2( 365.017, 300.358 )
 [node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 200, 288 )
 
-[node name="ControllableBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 240, -192 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 304, 184 )
 current = true
 zoom = Vector2( 0.6, 0.6 )
+
+[node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
+position = Vector2( 306.751, -51.3195 )

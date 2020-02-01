@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Blocks/ControllableBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Systems/BlockSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/Block_L_Left.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Ground/Ground_1_1.tscn" type="PackedScene" id=4]
@@ -19,6 +19,9 @@ size = Vector2( 800, 20 )
 margin_right = 117.0
 margin_bottom = 72.0
 
+[node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
+position = Vector2( 478.818, -57.7037 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 519, 542 )
 
@@ -33,9 +36,6 @@ position = Vector2( 653, 353 )
 
 [node name="Block_L_Left" parent="." instance=ExtResource( 3 )]
 position = Vector2( 498, 51 )
-
-[node name="ControllableBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 433.303, 41.8605 )
 
 [node name="Ground_1_2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 385, 294 )

@@ -10,21 +10,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 347.618
-margin_top = 95.6534
-margin_right = 447.618
-margin_bottom = 125.653
-rect_scale = Vector2( 4.11133, 3.30955 )
-text = "Overpass"
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 279.197
+margin_top = 37.7586
+margin_right = 429.197
+margin_bottom = 67.7586
+rect_scale = Vector2( 4, 4 )
+text = "Broken Overpass"
 
-[node name="Button" type="Button" parent="."]
-margin_left = 474.684
-margin_top = 283.241
-margin_right = 538.684
-margin_bottom = 303.241
+[node name="Instructions" type="RichTextLabel" parent="."]
+margin_left = 424.0
+margin_top = 216.0
+margin_right = 824.0
+margin_bottom = 316.0
+text = "Move blocks
+?
+Profit!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 448.0
+margin_right = 512.0
+margin_bottom = 468.0
 text = "Pelaa :D"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="StartButton" to="." method="_on_Button_button_up"]
