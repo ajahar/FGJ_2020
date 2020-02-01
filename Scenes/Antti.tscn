@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Blocks/ControllableBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/Block_C.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Blocks/Block_2_4.tscn" type="PackedScene" id=4]
@@ -45,9 +45,6 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
 mesh = SubResource( 2 )
-
-[node name="TestBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 89.9382, 231.696 )
 
 [node name="Blocks" type="Node2D" parent="."]
 position = Vector2( 451.807, 163.289 )
@@ -117,3 +114,6 @@ position = Vector2( 556.125, 444.666 )
 
 [node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 417.032, 383.006 )
+
+[node name="ControllableBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 481.882, 20.9658 )
