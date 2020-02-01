@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="GUI" type="MarginContainer"]
+anchor_right = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 97.0
+margin_bottom = 52.0
+
+[node name="Label1" type="Label" parent="VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 14.0
+text = "Test Label 1"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 77.0
+margin_bottom = 32.0
+text = "Test Label 2"
