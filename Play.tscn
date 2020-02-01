@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blocks/Block_L_Left.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ground/Ground_1_1.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 40 )
@@ -40,3 +42,9 @@ shape = SubResource( 3 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
 mesh = SubResource( 4 )
+
+[node name="Ground_1_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 529, 295 )
+
+[node name="Block_L_Left" parent="." instance=ExtResource( 3 )]
+position = Vector2( 524, 225 )
