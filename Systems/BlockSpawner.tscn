@@ -5,4 +5,4 @@
 
 [node name="BlockSpawner" type="Node2D"]
 script = ExtResource( 2 )
-Block = ExtResource( 1 )
+Blocks = [ ExtResource( 1 ) ]

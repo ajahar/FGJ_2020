@@ -33,9 +33,17 @@ size = Vector2( 1000, 20 )
 
 [node name="Root" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 304, 184 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
 [node name="GUI" parent="." instance=ExtResource( 2 )]
 margin_right = 117.0
 margin_bottom = 72.0
+
+[node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
+position = Vector2( 306.751, -51.3195 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 272, 352 )
@@ -114,11 +122,3 @@ position = Vector2( 365.017, 300.358 )
 
 [node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 200, 288 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 304, 184 )
-current = true
-zoom = Vector2( 0.6, 0.6 )
-
-[node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
-position = Vector2( 306.751, -51.3195 )
