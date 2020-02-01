@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 40 )
@@ -15,6 +16,10 @@ extents = Vector2( 400, 10 )
 size = Vector2( 800, 20 )
 
 [node name="Root" type="Node2D"]
+
+[node name="GUI" parent="." instance=ExtResource( 2 )]
+margin_right = 117.0
+margin_bottom = 72.0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 385.388, 253.664 )
