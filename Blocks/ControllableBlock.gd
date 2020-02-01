@@ -21,5 +21,5 @@ func _integrate_forces(state):
 
 func on_body_entered(body):
 	if controllable:
-		mode = RigidBody2D.MODE_KINEMATIC
+		set_deferred("mode", RigidBody2D.MODE_RIGID)
 		controllable = false
