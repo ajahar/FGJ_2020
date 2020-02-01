@@ -6,6 +6,7 @@ var screen_size  # Size of the game window.
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	connect("body_entered", self, "on_body_entered")
 	
 func _integrate_forces(state):
 	if !controllable:

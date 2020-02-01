@@ -24,4 +24,3 @@ shape = SubResource( 3 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 mesh = SubResource( 4 )
-[connection signal="body_entered" from="." to="." method="on_body_entered"]

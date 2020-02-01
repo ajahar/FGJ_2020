@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/blocks/block_angle.png" type="Texture" id=1]
+[ext_resource path="res://Blocks/ControllableBlock.gd" type="Script" id=2]
 
 [node name="Block_Angle" type="RigidBody2D"]
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
