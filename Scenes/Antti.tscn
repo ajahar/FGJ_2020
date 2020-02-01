@@ -38,7 +38,7 @@ margin_right = 117.0
 margin_bottom = 72.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 507, 563 )
+position = Vector2( 272, 352 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
@@ -47,7 +47,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="Blocks" type="Node2D" parent="."]
-position = Vector2( 451.807, 163.289 )
+position = Vector2( 224, -80 )
 
 [node name="Block_2_2" parent="Blocks" instance=ExtResource( 7 )]
 position = Vector2( -32.2404, 11.2715 )
@@ -101,21 +101,24 @@ position = Vector2( -100.394, -56.882 )
 position = Vector2( -178.583, -48.9377 )
 
 [node name="Ground_1_1" parent="." instance=ExtResource( 23 )]
-position = Vector2( 565.087, 368.308 )
+position = Vector2( 472, 296 )
 
 [node name="Ground_1_2" parent="." instance=ExtResource( 20 )]
-position = Vector2( 399.108, 444.666 )
+position = Vector2( 128, 288 )
 
 [node name="Ground_1_3" parent="." instance=ExtResource( 21 )]
-position = Vector2( 472.956, 398.421 )
+position = Vector2( 288, 288 )
 
 [node name="Ground_2_2" parent="." instance=ExtResource( 22 )]
-position = Vector2( 556.125, 444.666 )
+position = Vector2( 365.017, 300.358 )
 
 [node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
-position = Vector2( 417.032, 383.006 )
+position = Vector2( 200, 288 )
 
 [node name="ControllableBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 481.882, 20.9658 )
-contacts_reported = 1
-contact_monitor = true
+position = Vector2( 240, -192 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 304, 184 )
+current = true
+zoom = Vector2( 0.6, 0.6 )

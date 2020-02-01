@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 347.618
+margin_top = 95.6534
+margin_right = 447.618
+margin_bottom = 125.653
+rect_scale = Vector2( 4.11133, 3.30955 )
+text = "Overpass"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 474.684
+margin_top = 283.241
+margin_right = 538.684
+margin_bottom = 303.241
+text = "Pelaa :D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
