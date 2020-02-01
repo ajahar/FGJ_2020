@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mushroom.wav-a701b56d6c8cc3f8178d35c5f00da7c9.sample"
+
+[deps]
+
+source_file="res://Assets/sound/effects/mushroom.wav"
+dest_files=[ "res://.import/mushroom.wav-a701b56d6c8cc3f8178d35c5f00da7c9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
