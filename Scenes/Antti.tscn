@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
@@ -7,6 +7,18 @@
 [ext_resource path="res://Blocks/Block_Angle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Blocks/Block_Half_Moon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Blocks/Block_2_2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Blocks/Block_L_Left.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Blocks/Block_Slice.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Blocks/Block_Triangle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Blocks/Block_Spike.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Blocks/Block_Z.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Blocks/Block_S.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Blocks/Block_S_Mirror.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Blocks/Block_T_1_2_4.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Blocks/Block_Z_Mirror.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Blocks/Block_L_Right.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Blocks/Block_I_1_4.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Blocks/Block_Triangle_2_4.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 10 )
@@ -41,3 +53,27 @@ position = Vector2( 301.303, 295.861 )
 [node name="Block_C" parent="." instance=ExtResource( 3 )]
 
 [node name="Block_Half_Moon" parent="." instance=ExtResource( 6 )]
+
+[node name="Block_I_1_4" parent="." instance=ExtResource( 18 )]
+
+[node name="Block_L_Left" parent="." instance=ExtResource( 8 )]
+
+[node name="Block_L_Right" parent="." instance=ExtResource( 17 )]
+
+[node name="Block_S" parent="." instance=ExtResource( 13 )]
+
+[node name="Block_Slice" parent="." instance=ExtResource( 9 )]
+
+[node name="Block_Spike" parent="." instance=ExtResource( 11 )]
+
+[node name="Block_S_Mirror" parent="." instance=ExtResource( 14 )]
+
+[node name="Block_Triangle" parent="." instance=ExtResource( 10 )]
+
+[node name="Block_Triangle_2_4" parent="." instance=ExtResource( 19 )]
+
+[node name="Block_T_1_2_4" parent="." instance=ExtResource( 15 )]
+
+[node name="Block_Z" parent="." instance=ExtResource( 12 )]
+
+[node name="Block_Z_Mirror" parent="." instance=ExtResource( 16 )]
