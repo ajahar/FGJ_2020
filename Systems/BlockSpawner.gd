@@ -1,10 +1,6 @@
 extends Node2D
 
-export (PackedScene) var Block
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+export (Array, PackedScene) var Blocks
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +12,6 @@ func _ready():
 #	pass
 
 func spawn_block():
-	var block = Block.instance()
+	var block = Blocks[0].instance()
 	add_child(block)
 
