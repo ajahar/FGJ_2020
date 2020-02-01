@@ -117,3 +117,5 @@ position = Vector2( 417.032, 383.006 )
 
 [node name="ControllableBlock" parent="." instance=ExtResource( 1 )]
 position = Vector2( 481.882, 20.9658 )
+contacts_reported = 1
+contact_monitor = true
