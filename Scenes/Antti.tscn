@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Blocks/TestBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
@@ -19,6 +19,11 @@
 [ext_resource path="res://Blocks/Block_L_Right.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Blocks/Block_I_1_4.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Blocks/Block_Triangle_2_4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Ground/Ground_1_2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Ground/Ground_1_3.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Ground/Ground_2_2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Ground/Ground_1_1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Ground/Ground_2_3.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 10 )
@@ -42,38 +47,72 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="TestBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 301.303, 295.861 )
+position = Vector2( 518.419, 264.844 )
 
-[node name="Block_2_2" parent="." instance=ExtResource( 7 )]
+[node name="Blocks" type="Node2D" parent="."]
 
-[node name="Block_2_4" parent="." instance=ExtResource( 4 )]
+[node name="Block_2_2" parent="Blocks" instance=ExtResource( 7 )]
+position = Vector2( 618.461, 189.294 )
 
-[node name="Block_Angle" parent="." instance=ExtResource( 5 )]
+[node name="Block_2_4" parent="Blocks" instance=ExtResource( 4 )]
+position = Vector2( 713.792, 301.35 )
 
-[node name="Block_C" parent="." instance=ExtResource( 3 )]
+[node name="Block_Angle" parent="Blocks" instance=ExtResource( 5 )]
+position = Vector2( 791.981, 298.005 )
 
-[node name="Block_Half_Moon" parent="." instance=ExtResource( 6 )]
+[node name="Block_C" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( 849.681, 248.249 )
 
-[node name="Block_I_1_4" parent="." instance=ExtResource( 18 )]
+[node name="Block_Half_Moon" parent="Blocks" instance=ExtResource( 6 )]
+position = Vector2( 848.009, 183.022 )
 
-[node name="Block_L_Left" parent="." instance=ExtResource( 8 )]
+[node name="Block_I_1_4" parent="Blocks" instance=ExtResource( 18 )]
+position = Vector2( 837.974, 134.52 )
 
-[node name="Block_L_Right" parent="." instance=ExtResource( 17 )]
+[node name="Block_L_Left" parent="Blocks" instance=ExtResource( 8 )]
+position = Vector2( 554.07, 172.987 )
 
-[node name="Block_S" parent="." instance=ExtResource( 13 )]
+[node name="Block_L_Right" parent="Blocks" instance=ExtResource( 17 )]
+position = Vector2( 692.886, 183.44 )
 
-[node name="Block_Slice" parent="." instance=ExtResource( 9 )]
+[node name="Block_S" parent="Blocks" instance=ExtResource( 13 )]
+position = Vector2( 633.931, 276.681 )
 
-[node name="Block_Spike" parent="." instance=ExtResource( 11 )]
+[node name="Block_Slice" parent="Blocks" instance=ExtResource( 9 )]
+position = Vector2( 739.716, 241.977 )
 
-[node name="Block_S_Mirror" parent="." instance=ExtResource( 14 )]
+[node name="Block_Spike" parent="Blocks" instance=ExtResource( 11 )]
+position = Vector2( 705.848, 139.119 )
 
-[node name="Block_Triangle" parent="." instance=ExtResource( 10 )]
+[node name="Block_S_Mirror" parent="Blocks" instance=ExtResource( 14 )]
+position = Vector2( 774.838, 187.203 )
 
-[node name="Block_Triangle_2_4" parent="." instance=ExtResource( 19 )]
+[node name="Block_Triangle" parent="Blocks" instance=ExtResource( 10 )]
+position = Vector2( 499.714, 187.203 )
 
-[node name="Block_T_1_2_4" parent="." instance=ExtResource( 15 )]
+[node name="Block_Triangle_2_4" parent="Blocks" instance=ExtResource( 19 )]
+position = Vector2( 767.73, 128.248 )
 
-[node name="Block_Z" parent="." instance=ExtResource( 12 )]
+[node name="Block_T_1_2_4" parent="Blocks" instance=ExtResource( 15 )]
+position = Vector2( 631.841, 116.959 )
 
-[node name="Block_Z_Mirror" parent="." instance=ExtResource( 16 )]
+[node name="Block_Z" parent="Blocks" instance=ExtResource( 12 )]
+position = Vector2( 550.307, 121.14 )
+
+[node name="Block_Z_Mirror" parent="Blocks" instance=ExtResource( 16 )]
+position = Vector2( 472.119, 129.084 )
+
+[node name="Ground_1_1" parent="." instance=ExtResource( 23 )]
+position = Vector2( 277.796, 154.682 )
+
+[node name="Ground_1_2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 111.817, 231.039 )
+
+[node name="Ground_1_3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 185.665, 184.795 )
+
+[node name="Ground_2_2" parent="." instance=ExtResource( 22 )]
+position = Vector2( 268.834, 231.039 )
+
+[node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
+position = Vector2( 129.742, 169.38 )
