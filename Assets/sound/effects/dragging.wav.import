@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dragging.wav-622e8dcf04e1b47363c9153d334fd3ea.sample"
+
+[deps]
+
+source_file="res://Assets/sound/effects/dragging.wav"
+dest_files=[ "res://.import/dragging.wav-622e8dcf04e1b47363c9153d334fd3ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
