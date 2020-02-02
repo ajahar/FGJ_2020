@@ -15,4 +15,4 @@ __meta__ = {
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 16, 13, 6.4, 13, 4.5, 5, -16, 5, -16, -11, 16, -11 )
+polygon = PoolVector2Array( 16.0266, 8.7462, 8.07251, 8.88575, 7.97948, 1.30382, -15.6036, 1.25731, -15.6966, -7.53401, 16.0266, -7.39446 )
