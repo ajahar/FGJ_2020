@@ -3,6 +3,8 @@ extends Node2D
 signal update_score
 signal block_hit
 
+var audio
+
 var game_timer = 0.0
 var block_timer = 0.0
 var play_time = 0
@@ -31,6 +33,8 @@ func _process(delta):
 	#emit_signal("update_score", "foobar")
 
 func block_hit():
+	if audio != null:
+		audio.play_block_down()
 	spawn_block = true
 	
 

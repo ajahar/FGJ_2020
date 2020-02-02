@@ -14,6 +14,7 @@ func _process(delta):
 
 
 func spawn_block():
+	GameManager.audio.play_rubber()
 	var block = Blocks[randi() % Blocks.size()].instance()
 	add_child(block)
 

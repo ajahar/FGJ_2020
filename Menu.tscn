@@ -31,11 +31,12 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
-margin_left = 448.0
-margin_top = 448.0
-margin_right = 512.0
-margin_bottom = 468.0
-text = "Pelaa :D"
+margin_left = 409.909
+margin_top = 416.711
+margin_right = 473.909
+margin_bottom = 436.711
+rect_scale = Vector2( 2, 2 )
+text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
