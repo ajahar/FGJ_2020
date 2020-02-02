@@ -17,15 +17,21 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1004.0
-margin_bottom = 52.0
+margin_bottom = 70.0
 
-[node name="PlayTime" type="Label" parent="VBoxContainer"]
+[node name="Mushrooms" type="Label" parent="VBoxContainer"]
 margin_right = 984.0
 margin_bottom = 14.0
-text = "Test Label 1"
+text = "Mushrooms"
 
-[node name="Score" type="Label" parent="VBoxContainer"]
+[node name="PlayTime" type="Label" parent="VBoxContainer"]
 margin_top = 18.0
 margin_right = 984.0
 margin_bottom = 32.0
-text = "Test Label 2"
+text = "Test Label 1"
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 984.0
+margin_bottom = 50.0
+text = "Repair the Overpass!"

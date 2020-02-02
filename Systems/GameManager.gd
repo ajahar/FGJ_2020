@@ -1,9 +1,12 @@
 extends Node2D
 
-signal update_score
+signal update_message
 signal block_hit
+signal use_mushroom
 
 var audio
+
+var magic_mushrooms = 4
 
 var game_timer = 0.0
 var block_timer = 0.0
@@ -32,13 +35,17 @@ func _process(delta):
 	# TODO: Show shit UI etc...	
 	#emit_signal("update_score", "foobar")
 
-func block_hit():
-	if audio != null:
+func block_hit(mushroom = false):
+	if audio != null && !mushroom:
 		audio.play_block_down()
+	elif audio != null:
+		magic_mushrooms -= 1
+		emit_signal("use_mushroom")
+		audio.play_mushroom()
 	spawn_block = true
 	
 func goal_reached():
-	emit_signal("update_score", "Level clear!")
+	emit_signal("update_message", "Level clear!")
 
 func game_over():
-	emit_signal("update_score", "Game over")
+	emit_signal("update_message", "Game over")

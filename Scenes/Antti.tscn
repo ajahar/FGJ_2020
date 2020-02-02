@@ -29,7 +29,7 @@ margin_right = 117.0
 margin_bottom = 72.0
 
 [node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
-position = Vector2( 290.689, -33.861 )
+position = Vector2( 287.431, 45.146 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 272, 352 )
