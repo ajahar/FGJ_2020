@@ -3,6 +3,7 @@ extends KinematicBody2D
 var screen_size  # Size of the game window.
 const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
+#TODO: floor_max_angle ?
 const SLOPE_SLIDE_STOP = 25.0
 const WALK_SPEED = 250 # pixels/sec
 const JUMP_SPEED = 200

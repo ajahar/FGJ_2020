@@ -8,4 +8,4 @@
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 12.3776, 11.4397, 12.3776, 16.3294, -12.9309, 16.3294, -12.9846, 11.977, -12.7697, 7.03354, 12.2164, 6.9798 )
+polygon = PoolVector2Array( 11.1934, 11.5996, 11.3055, 15.9744, -12.8675, 16.1707, -12.7273, 12.0203, -12.5871, 7.42124, 11.1092, 7.72972 )
