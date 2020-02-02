@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	play_time.set_text("%s %s" % [GameManager.play_time, GameManager.game_timer])
+	play_time.set_text("%s" % GameManager.play_time)
 
 
 func on_update_score(signal_text):
