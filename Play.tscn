@@ -1,19 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Systems/BlockSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Systems/Audio.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Ground/Ground_1_1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Ground/Ground_1_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ground/StartArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Systems/FallPlane.gd" type="Script" id=5]
 [ext_resource path="res://Ground/Ground_2_3.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Rat/Rat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Ground/GoalArea.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 400, 10 )
-
-[sub_resource type="QuadMesh" id=2]
-size = Vector2( 800, 20 )
 
 [node name="Root" type="Node2D"]
 
@@ -31,26 +28,32 @@ margin_bottom = 72.0
 [node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
 position = Vector2( 295.885, -24.5548 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 328.701, 345.562 )
+[node name="FallPlane" type="Area2D" parent="."]
+position = Vector2( 325.704, 394.51 )
+script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallPlane"]
+scale = Vector2( 2, 1 )
 shape = SubResource( 1 )
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
-mesh = SubResource( 2 )
-
-[node name="Ground_1_1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 445.512, 276.88 )
-
-[node name="Ground_1_2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 177.512, 217.88 )
-
 [node name="Ground_2_3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 264.512, 224.88 )
+position = Vector2( 309.963, 287.313 )
+
+[node name="Ground_2_5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 410.356, 287.313 )
+
+[node name="Ground_2_4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 199.582, 286.814 )
 
 [node name="GoalArea" parent="." instance=ExtResource( 8 )]
-position = Vector2( 180.619, 309.665 )
+position = Vector2( 569.203, 238.241 )
 
 [node name="Rat" parent="." instance=ExtResource( 7 )]
-position = Vector2( 80.3786, 140.711 )
+position = Vector2( 36.9252, 241.996 )
+
+[node name="StartArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 47.4492, 256.725 )
+
+[node name="StartArea2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 593.864, 262.219 )
+[connection signal="body_entered" from="FallPlane" to="FallPlane" method="_on_FallPlane_body_entered"]

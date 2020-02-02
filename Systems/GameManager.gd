@@ -38,4 +38,7 @@ func block_hit():
 	spawn_block = true
 	
 func goal_reached():
-	emit_signal("update_score", "You win!")
+	emit_signal("update_score", "Level clear!")
+
+func game_over():
+	emit_signal("update_score", "Game over")
