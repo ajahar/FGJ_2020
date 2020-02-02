@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Systems/Audio.tscn" type="PackedScene" id=1]
 
 [node name="Root" type="Node2D"]
 
@@ -9,3 +11,5 @@ text = "Hello world"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Audio" parent="." instance=ExtResource( 1 )]

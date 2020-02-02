@@ -7,7 +7,6 @@ onready var score: Label = get_node("VBoxContainer/Score")
 func _ready():
 	GameManager.connect("update_score", self, "on_update_score")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	play_time.set_text("%s %s" % [GameManager.play_time, GameManager.game_timer])

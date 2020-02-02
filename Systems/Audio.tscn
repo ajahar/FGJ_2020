@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/sound/song.tres" type="AudioStream" id=1]
+[ext_resource path="res://Systems/Audio.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sound/effects/click.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/sound/effects/block_down.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/sound/effects/death.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/sound/effects/mushroom.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/sound/effects/dragging.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/sound/effects/open.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/sound/effects/rubber.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/sound/effects/start.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/sound/effects/tadaa.wav" type="AudioStream" id=11]
+
+[node name="Audio" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "Song"
+
+[node name="BlockDown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+bus = "Effects"
+
+[node name="MoveClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.0
+bus = "Effects"
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+bus = "Effects"
+
+[node name="Dragging" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -6.0
+bus = "Effects"
+
+[node name="Mushroom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -3.0
+bus = "Effects"
+
+[node name="Open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "Effects"
+
+[node name="Rubber" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -4.0
+bus = "Effects"
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -5.0
+bus = "Effects"
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -4.0
+bus = "Effects"
