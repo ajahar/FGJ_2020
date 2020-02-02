@@ -4,7 +4,7 @@ Broken Overpass
 
 Global Game Jam 2020 entry.
 
-[https://globalgamejam.org/2020/games/broken-overpass-6]
+https://globalgamejam.org/2020/games/broken-overpass-6
 
 Sound Effects
 -------------
