@@ -17,5 +17,4 @@ func _ready():
 
 
 func _on_Button_button_up():
-	# TODO: Load Play scene
-	pass # Replace with function body.
+	get_tree().change_scene("res://Play.tscn")
