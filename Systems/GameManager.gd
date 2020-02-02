@@ -37,4 +37,5 @@ func block_hit():
 		audio.play_block_down()
 	spawn_block = true
 	
-
+func goal_reached():
+	emit_signal("update_score", "You win!")
