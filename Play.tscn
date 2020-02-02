@@ -29,8 +29,11 @@ margin_bottom = 72.0
 position = Vector2( 295.885, -24.5548 )
 
 [node name="FallPlane" type="Area2D" parent="."]
-position = Vector2( 325.704, 394.51 )
+position = Vector2( 323.207, 458.442 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallPlane"]
 scale = Vector2( 2, 1 )
