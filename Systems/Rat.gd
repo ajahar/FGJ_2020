@@ -20,7 +20,7 @@ func _physics_process(delta):
 	# Apply gravity
 	linear_vel += delta * GRAVITY_VEC
 	# Move and slide
-	linear_vel = move_and_slide(linear_vel, FLOOR_NORMAL, SLOPE_SLIDE_STOP)
+	linear_vel = move_and_slide(linear_vel, FLOOR_NORMAL, SLOPE_SLIDE_STOP, 4, PI/4, false)
 	# Detect if we are on floor - only works if called *after* move_and_slide
 	var on_floor = is_on_floor()
 
