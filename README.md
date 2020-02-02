@@ -16,4 +16,4 @@ SieuAmThanh: Angry Rat / Chuột07.wav
 License
 -------
 
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0
