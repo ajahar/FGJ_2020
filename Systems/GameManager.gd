@@ -45,7 +45,11 @@ func block_hit(mushroom = false):
 	spawn_block = true
 	
 func goal_reached():
+	if audio != null:
+		audio.play_victory()
 	emit_signal("update_message", "Level clear!")
 
 func game_over():
+	if audio != null:
+		audio.play_mouse_death()
 	emit_signal("update_message", "Game over")
