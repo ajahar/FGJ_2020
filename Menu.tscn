@@ -17,15 +17,22 @@ margin_right = 429.197
 margin_bottom = 67.7586
 rect_scale = Vector2( 4, 4 )
 text = "Broken Overpass"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Instructions" type="RichTextLabel" parent="."]
-margin_left = 424.0
-margin_top = 216.0
-margin_right = 824.0
-margin_bottom = 316.0
-text = "Move blocks
-?
-Profit!"
+margin_left = 344.01
+margin_top = 180.086
+margin_right = 744.01
+margin_bottom = 380.086
+text = "Repair the Overpass for Rat Magician.
+
+Arrow Keys: Move falling block left and right
+Enter: Use Magick Mushroom to stop block
+W,D: Move Rat left and right
+Space: Jump Rat
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
