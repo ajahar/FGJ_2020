@@ -6,16 +6,16 @@ signal use_mushroom
 
 var audio
 
-var magic_mushrooms = 4
+var magic_mushrooms: int
 
-var game_timer = 0.0
-var block_timer = 0.0
-var play_time = 0
-var spawn_block = false
+var game_timer: float
+var block_timer: float
+var play_time: int
+var spawn_block: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Reset()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,6 +35,13 @@ func _process(delta):
 	# TODO: Show shit UI etc...	
 	#emit_signal("update_score", "foobar")
 
+func Reset():
+	magic_mushrooms = 4
+	game_timer = 0.0
+	block_timer = 0.0
+	play_time = 0
+	spawn_block = false
+	
 func block_hit(mushroom = false):
 	if audio != null && !mushroom:
 		audio.play_block_down()

@@ -11,21 +11,24 @@ func _ready():
 	GameManager.connect("use_mushroom", self, "on_use_mushroom")
 	mushrooms.set_text("Magic Mushrooms: %s" % GameManager.magic_mushrooms)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	play_time.set_text("Time: %s" % GameManager.play_time)
 
+
 func on_use_mushroom():
 	mushrooms.set_text("Magic Mushrooms: %s" % GameManager.magic_mushrooms)
+
 
 func on_update_message(signal_text):
 	message.set_text(signal_text)
 	end_panel.visible = true
-	
 
-func _on_Restart_pressed():
+
+func OnRestartPressed():
 	get_tree().change_scene("res://Menu.tscn")
 
 
-func _on_Quit_pressed():
+func OnQuitPressed():
 	get_tree().quit()

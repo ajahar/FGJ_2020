@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Systems/BlockSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Systems/Audio.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Systems/FallPlane.gd" type="Script" id=4]
+[ext_resource path="res://Ground/StartArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Rat/Rat.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ground/Ground_1_2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Ground/Ground_1_3.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Ground/Ground_2_2.tscn" type="PackedScene" id=22]
@@ -10,10 +13,7 @@
 [ext_resource path="res://Ground/Ground_2_3.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 500, 10 )
-
-[sub_resource type="QuadMesh" id=2]
-size = Vector2( 1000, 20 )
+extents = Vector2( 400, 10 )
 
 [node name="Root" type="Node2D"]
 
@@ -31,15 +31,6 @@ margin_bottom = 72.0
 [node name="BlockSpawner" parent="." instance=ExtResource( 1 )]
 position = Vector2( 287.431, 45.146 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 272, 352 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 1 )
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
-mesh = SubResource( 2 )
-
 [node name="Ground_1_1" parent="." instance=ExtResource( 23 )]
 position = Vector2( 472, 296 )
 
@@ -54,3 +45,21 @@ position = Vector2( 365.017, 300.358 )
 
 [node name="Ground_2_3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 200, 288 )
+
+[node name="Rat" parent="." instance=ExtResource( 6 )]
+position = Vector2( 65.8383, 265.46 )
+
+[node name="StartArea" parent="." instance=ExtResource( 5 )]
+position = Vector2( 30.3446, 286.862 )
+
+[node name="FallPlane" type="Area2D" parent="."]
+position = Vector2( 304.207, 340.442 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallPlane"]
+scale = Vector2( 2, 1 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="FallPlane" to="FallPlane" method="_on_FallPlane_body_entered"]

@@ -58,5 +58,6 @@ text = "Restart"
 margin_top = 24.0
 margin_right = 57.0
 margin_bottom = 44.0
-[connection signal="pressed" from="Panel/End/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
-[connection signal="pressed" from="Panel/End/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+text = "Quit"
+[connection signal="pressed" from="Panel/End/VBoxContainer/Restart" to="." method="OnRestartPressed"]
+[connection signal="pressed" from="Panel/End/VBoxContainer/Quit" to="." method="OnQuitPressed"]

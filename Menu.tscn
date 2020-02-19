@@ -47,4 +47,4 @@ text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_up" from="StartButton" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="StartButton" to="." method="OnButtonButtonUp"]
